@@ -12,3 +12,7 @@ client.on("ready", () => {
   console.log("NovaSupport est allumé !\n");
   client.user.setActivity("Bonne année 2019!");
 }); 
+
+client.on("message", message => {
+  if(message.content === "!test") return message.channel.send("Test !");
+})
